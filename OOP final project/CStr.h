@@ -21,6 +21,8 @@ public:
 	void SetColor(int color);
 	int GetColor();
 	void SetStr(string str);
+	void Print();
+	void Print(int color);
 	string GetStr();
 
 	CStr& operator = (string str);

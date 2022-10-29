@@ -5,6 +5,7 @@
 
 class Menu
 {
-
+public:
+	void Main(int color = 10);
 };
 

@@ -29,6 +29,20 @@ void CStr::SetStr(string str)
 	this->str = str;
 }
 
+void CStr::Print()
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+	cout << str;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DefaultColor);
+}
+
+void CStr::Print(int color)
+{
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+	cout << str;
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), DefaultColor);
+}
+
 string CStr::GetStr()
 {
 	return str;
@@ -49,7 +63,6 @@ CStr& CStr::operator=(CStr obj)
 
 std::ostream& operator<<(std::ostream& out, const CStr& obj)
 {
-	const int c = obj.color;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), obj.color);
 	out << obj.str;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), obj.DefaultColor);

@@ -1,7 +1,9 @@
 #include "Timer.h"
+#include "Stopwatch.h"
 
-Timer::Timer(int t)
+Timer::Timer(int t) 
 {
+
 	start = time(0);
 	finish = t;
 }

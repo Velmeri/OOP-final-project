@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-	Timer t(-1);
-
+	Stopwatch Start;
+	Menu menu;
 
 	return 0;
 }
