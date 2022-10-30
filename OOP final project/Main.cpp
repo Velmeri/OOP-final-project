@@ -1,11 +1,12 @@
-#include <iostream>
+﻿#include <iostream>
 #include "All.h"
 
 using namespace std;
 
 int main() {
-	Stopwatch Start;
 	Menu menu;
-
+	cout << menu.Main();
+	Stopwatch Start;
+	
 	return 0;
 }
