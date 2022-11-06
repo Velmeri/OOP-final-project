@@ -14,6 +14,12 @@ CStr::CStr(string str, int color)
 	this->color = color;
 }
 
+CStr::CStr(char c, int color)
+{
+	str = c;
+	this->color = color;
+}
+
 void CStr::SetColor(int color)
 {
 	this->color = color;
