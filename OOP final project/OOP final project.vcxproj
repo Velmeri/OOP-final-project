@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Gallow.cpp" />
     <ClCompile Include="CStr.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Stopwatch.cpp" />
     <ClCompile Include="Word.cpp" />
+    <ClCompile Include="WordFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Gallow.h" />
@@ -140,6 +140,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Stopwatch.h" />
     <ClInclude Include="Word.h" />
+    <ClInclude Include="WordFile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

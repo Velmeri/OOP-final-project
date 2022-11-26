@@ -6,6 +6,7 @@ using namespace std;
 
 class Word
 {
+	
 	string word;
 	bool* GuessedSymbols;
 	bool UsedSymbols[26];

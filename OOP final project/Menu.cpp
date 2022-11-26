@@ -250,8 +250,284 @@ bool Menu::SP(){
 		if (mistakes < 6)
 			cout << "\n\tWell done. You won\n\t";
 		else
-			cout << "\n\tNext time you MAY win\n\t";
+			cout << "\n\tMaybe next time you will win\n\t";
 		system("pause");
 		system("cls");
 	return 1;
+}
+
+int Menu::Option(short option)
+{
+	switch (option) {
+	case 0:	// Color
+		cout << endl << '\t';
+		cout << CStr(">COLOR", color);
+		switch (color)
+		{
+		case BLUE:
+			cout << CStr("  (BLUE)", color);
+			break;
+		case GREEN:
+			cout << CStr("  (GREAN)", color);
+			break;
+		case CIAN:
+			cout << CStr("  (CIAN)", color);
+			break;
+		case RED:
+			cout << CStr("  (RED)", color);
+			break;
+		case PURPLE:
+			cout << CStr("  (PURPLE)", color);
+			break;
+		case YELLOW:
+			cout << CStr("  (YELLOW)", color);
+			break;
+		default:
+			cout << "???";
+			break;
+		}
+		cout << endl << '\t';
+		cout << "CHEAT MOD";
+		switch (CheatMod) {
+		case 0:
+			cout << "  (OFF)";
+			break;
+		case 1:
+			cout << "  (ON)";
+		}
+		cout << endl << '\t';
+		cout << "BACK";
+		break;
+	case 1:	//Cheat mod
+		cout << endl << '\t';
+		cout << "COLOR";
+		switch (color)
+		{
+		case BLUE:
+			cout << "  (BLUE)";
+			break;
+		case GREEN:
+			cout << "  (GREAN)";
+			break;
+		case CIAN:
+			cout << "  (CIAN)";
+			break;
+		case RED:
+			cout << "  (RED)";
+			break;
+		case PURPLE:
+			cout << "  (PURPLE)";
+			break;
+		case YELLOW:
+			cout << "  (YELLOW)";
+			break;
+		default:
+			cout << "???";
+			break;
+		}
+		cout << endl << '\t';
+		cout << CStr(">CHEAT MOD", color);
+		switch (CheatMod) {
+		case 0:
+			cout << CStr("  (OFF)", color);
+			break;
+		case 1:
+			cout << CStr("  (ON)", color);
+		}
+		cout << endl << '\t';
+		cout << "BACK";
+		break;
+	case 2:
+		cout << endl << '\t';
+		cout << "COLOR";
+		switch (color)
+		{
+		case BLUE:
+			cout << "  (BLUE)";
+			break;
+		case GREEN:
+			cout << "  (GREAN)";
+			break;
+		case CIAN:
+			cout << "  (CIAN)";
+			break;
+		case RED:
+			cout << "  (RED)";
+			break;
+		case PURPLE:
+			cout << "  (PURPLE)";
+			break;
+		case YELLOW:
+			cout << "  (YELLOW)";
+			break;
+		default:
+			cout << "???";
+			break;
+		}
+		cout << endl << '\t';
+		cout << "CHEAT MOD";
+		switch (CheatMod) {
+		case 0:
+			cout << "  (OFF)";
+			break;
+		case 1:
+			cout << "  (ON)";
+		}
+		cout << endl << '\t';
+		cout << CStr(">BACK", color);
+		break;
+	}
+	cout << endl << endl;
+	cout << "\tW - UP;   S - DOWN;   F - SELECT";
+
+	bool back = 0;
+	int min = 0, max = 2;
+
+	while (!back) {
+		int preOption = option;
+		if (GetKeyState('W') & 0x8000) {
+			if (option != min)
+				option--;
+			else
+				option = max;
+			while (GetKeyState('W') & 0x8000); // Я сам додумался ＼(￣▽￣)／
+		}
+		else if (GetKeyState('S') & 0x8000) {
+			if (option != max)
+				option++;
+			else option = min;
+			while (GetKeyState('S') & 0x8000);
+		}
+		
+
+		if (option != preOption) {
+			system("cls");
+			switch (option) {
+			case 0:	// Color
+				cout << endl << '\t';
+				cout << CStr(">COLOR", color);
+				switch (color)
+				{
+				case BLUE:
+					cout << CStr("  (BLUE)", color);
+					break;
+				case GREEN:
+					cout << CStr("  (GREAN)", color);
+					break;
+				case CIAN:
+					cout << CStr("  (CIAN)", color);
+					break;
+				case RED:
+					cout << CStr("  (RED)", color);
+					break;
+				case PURPLE:
+					cout << CStr("  (PURPLE)", color);
+					break;
+				case YELLOW:
+					cout << CStr("  (YELLOW)", color);
+					break;
+				default:
+					cout << "???";
+					break;
+				}
+				cout << endl << '\t';
+				cout << "CHEAT MOD";
+				switch (CheatMod) {
+				case 0:
+					cout << "  (OFF)";
+					break;
+				case 1:
+					cout << "  (ON)";
+				}
+				cout << endl << '\t';
+				cout << "BACK";
+				break;
+			case 1:	//Cheat mod
+				cout << endl << '\t';
+				cout << "COLOR";
+				switch (color)
+				{
+				case BLUE:
+					cout << "  (BLUE)";
+					break;
+				case GREEN:
+					cout << "  (GREAN)";
+					break;
+				case CIAN:
+					cout << "  (CIAN)";
+					break;
+				case RED:
+					cout << "  (RED)";
+					break;
+				case PURPLE:
+					cout << "  (PURPLE)";
+					break;
+				case YELLOW:
+					cout << "  (YELLOW)";
+					break;
+				default:
+					cout << "???";
+					break;
+				}
+				cout << endl << '\t';
+				cout << CStr(">CHEAT MOD", color);
+				switch (CheatMod) {
+				case 0:
+					cout << CStr("  (OFF)", color);
+					break;
+				case 1:
+					cout << CStr("  (ON)", color);
+				}
+				cout << endl << '\t';
+				cout << "BACK";
+				break;
+			case 2:
+				cout << endl << '\t';
+				cout << "COLOR";
+				switch (color)
+				{
+				case BLUE:
+					cout << "  (BLUE)";
+					break;
+				case GREEN:
+					cout << "  (GREAN)";
+					break;
+				case CIAN:
+					cout << "  (CIAN)";
+					break;
+				case RED:
+					cout << "  (RED)";
+					break;
+				case PURPLE:
+					cout << "  (PURPLE)";
+					break;
+				case YELLOW:
+					cout << "  (YELLOW)";
+					break;
+				default:
+					cout << "???";
+					break;
+				}
+				cout << endl << '\t';
+				cout << "CHEAT MOD";
+				switch (CheatMod) {
+				case 0:
+					cout << "  (OFF)";
+					break;
+				case 1:
+					cout << "  (ON)";
+				}
+				cout << endl << '\t';
+				cout << CStr(">BACK", color);
+				break;
+			}
+			cout << endl << endl;
+			cout << "\tW - UP;   S - DOWN;   F - SELECT";
+		}
+		else if (GetKeyState('F') & 0x8000) {
+			while (GetKeyState('F') & 0x8000);
+			system("cls");
+			return option;
+		}
+	}
 }
