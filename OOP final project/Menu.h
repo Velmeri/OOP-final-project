@@ -3,6 +3,7 @@
 #include "CStr.h"
 #include "Word.h"
 #include "Stopwatch.h"
+#include "WordFile.h"
 
 class Menu
 {

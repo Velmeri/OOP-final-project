@@ -149,13 +149,17 @@ int Menu::START()
 bool Menu::SP(){
 	Gallow gallow;
 	Stopwatch Start;
-	Word word("APPLE");
+	WordFile WF;
+	string SWord = WF.GetRandWord();
+	Word word(SWord);
 	int const min = 65;
 	int const max = 90;
 	int mistakes = 0;
 	int option = 65;
-
-		cout << "\n\t\t";
+		
+		std::cout << "\n\t\t";
+		if (CheatMod)
+			cout << endl << '\t' << SWord;
 		word.Show();
 		cout << "\n\n\tUsed: ";
 		cout << "\n\n\t";
@@ -249,9 +253,11 @@ bool Menu::SP(){
 		std::system("cls");
 		if (mistakes < 6)
 			cout << "\n\tWell done. You won\n\t";
+		
 		else
 			cout << "\n\tMaybe next time you will win\n\t";
-		system("pause");
+		Stopwatch a;
+		while (a.GetTime() <= 1);
 		system("cls");
 	return 1;
 }
